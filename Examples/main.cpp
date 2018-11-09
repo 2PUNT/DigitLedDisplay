@@ -52,6 +52,9 @@ int main(){
     auto CLK = hwlib::target::pin_in_out(hwlib::target::pins::d24);
 	DigitLedDisplay display(CLK, DIO);
     
+    //Clears the display
+    display.ClearDisplay();
+    
     testDisplay(display);
     testBrightness(display);
     testDisplayOnOff(display);
