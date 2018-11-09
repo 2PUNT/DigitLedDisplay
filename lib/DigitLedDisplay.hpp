@@ -48,6 +48,11 @@ public:
     ///@param newDisplayState Turns the display on (True) or off (False).
     void TurnDisplayOn(bool newDisplayState);
     
+    ///@fn void DigitLedDisplay::ClearDisplay()
+    ///@brief Clears the display
+    ///@details This method clears the display.
+    void ClearDisplay();
+    
     ///@fn bool DigitLedDisplay::GetDisplayState()
     ///@brief Returns the state of the display.
     ///@details This method returns @c true if the display is on and returns @c false if the display os off.

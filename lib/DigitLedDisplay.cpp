@@ -7,6 +7,7 @@ void DigitLedDisplay::Display(int firstDigit,int secondDigit,bool leadingZero){
 
 void DigitLedDisplay::ChangeBrightness(int brightness){
     segDisplay.setBrightness(brightness);
+    DigitLedDisplay::Display(firstDigit,secondDigit,leadingZero);
 }
 
 void DigitLedDisplay::TurnDisplayOn(bool newDisplayState){
@@ -17,6 +18,11 @@ void DigitLedDisplay::TurnDisplayOn(bool newDisplayState){
         segDisplay.setBrightness(brightness, newDisplayState);
         isDisplayOn = true;
     }
+    DigitLedDisplay::Display(firstDigit,secondDigit,leadingZero);
+}
+
+void DigitLedDisplay::ClearDisplay(){
+    segDisplay.clear();
 }
 
 bool DigitLedDisplay::GetDisplayState(){
