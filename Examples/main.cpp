@@ -3,7 +3,7 @@
 
 void testDisplay(DigitLedDisplay &display){
     //Display numbers, without leading zero
-    for(int i=20; i<=0; i--){
+    for(int i=20; i>=0; i--){
         display.Display(i,0,false);
         hwlib::wait_ms(500);
     }
@@ -13,7 +13,7 @@ void testDisplay(DigitLedDisplay &display){
     for(int i=0; i<=10; i++){
         for(int j=0; j<10; j++){
             display.Display(i,j);
-            hwlib::wait_ms(500);
+            hwlib::wait_ms(100);
         }
     }
     hwlib::wait_ms(1000);
@@ -24,6 +24,7 @@ void testBrightness(DigitLedDisplay &display){
     display.Display(12,34);
     for(int i=7; i>=0; i--){
         display.ChangeBrightness(i);
+        hwlib::wait_ms(500);
     }
     display.ChangeBrightness(4);
     hwlib::wait_ms(1000);
