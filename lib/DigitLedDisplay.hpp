@@ -3,6 +3,8 @@
 
 #include "hwlib.hpp"
 
+///@class DigitLedDisplay
+///@brief A class for the 4x 7-segment display boundary object.
 class DigitLedDisplay{
 private:
 //      A
