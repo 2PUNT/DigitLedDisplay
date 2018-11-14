@@ -9,10 +9,10 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := DigitLedDisplay.cpp hwlib_TM1637.cpp
+SOURCES := DigitLedDisplay.cpp
 
 # header files in this project
-HEADERS := DigitLedDisplay.hpp hwlib_TM1637.hpp
+HEADERS := DigitLedDisplay.hpp
 
 # other places to look for files for this project
 SEARCH  := ../lib
